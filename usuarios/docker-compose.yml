@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  usuarios-api:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-d0h09evdi6es73f82f850-a:5432/farmacia_db_9xzi
+      SPRING_DATASOURCE_USERNAME: farmacia_db_9xzi_user
+      SPRING_DATASOURCE_PASSWORD: 4jJNxBPzttgDwZ3Z7CW4nFEUQYxSbK5W
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+volumes:
+  pgdata:
