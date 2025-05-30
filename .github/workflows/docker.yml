@@ -2,8 +2,6 @@ name: Build and Dockerize Usuarios Microservice
 
 on:
   push:
-    branches: [ "main" ]  # Cambia si usas otra rama
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -19,6 +17,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: 🔧 Make Maven wrapper executable
+        run: chmod +x mvnw
 
       - name: 📦 Build with Maven
         run: ./mvnw clean package -DskipTests
