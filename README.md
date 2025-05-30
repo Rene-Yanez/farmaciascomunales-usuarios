@@ -1,1 +1,0 @@
-# farmaciascomunales-usuarios
