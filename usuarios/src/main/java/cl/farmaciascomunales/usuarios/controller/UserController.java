@@ -1,6 +1,6 @@
 package cl.farmaciascomunales.usuarios.controller;
 
-import cl.farmaciascomunales.usuarios.model.User;
+import cl.farmaciascomunales.usuarios.model.Usuario;
 import cl.farmaciascomunales.usuarios.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,17 +17,17 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAll() {
+    public List<Usuario> getAll() {
         return service.getAll();
     }
 
     @PostMapping
-    public User create(@RequestBody User user) {
+    public Usuario create(@RequestBody Usuario user) {
         return service.save(user);
     }
 
     @GetMapping("/{id}")
-    public User getById(@PathVariable Long id) {
+    public Usuario getById(@PathVariable Long id) {
         return service.getById(id);
     }
 }

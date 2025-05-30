@@ -1,6 +1,6 @@
 package cl.farmaciascomunales.usuarios.service;
 
-import cl.farmaciascomunales.usuarios.model.User;
+import cl.farmaciascomunales.usuarios.model.Usuario;
 import cl.farmaciascomunales.usuarios.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +14,15 @@ public class UserService {
         this.repo = repo;
     }
 
-    public List<User> getAll() {
+    public List<Usuario> getAll() {
         return repo.findAll();
     }
 
-    public User save(User user) {
+    public Usuario save(Usuario user) {
         return repo.save(user);
     }
 
-    public User getById(Long id) {
+    public Usuario getById(Long id) {
         return repo.findById(id).orElse(null);
     }
 }
