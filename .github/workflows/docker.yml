@@ -25,4 +25,4 @@ jobs:
         run: ./mvnw clean package -DskipTests
 
       - name: 🐳 Build Docker image
-        run: docker build -t usuarios-api .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/farmaciascomunales-usuarios:latest .
