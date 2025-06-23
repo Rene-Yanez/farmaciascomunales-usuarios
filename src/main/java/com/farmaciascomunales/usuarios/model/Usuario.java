@@ -33,4 +33,12 @@ public class Usuario {
 
     public void setRol(String rol) { this.rol = rol; }
 
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
     }
