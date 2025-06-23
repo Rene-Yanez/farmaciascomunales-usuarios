@@ -1,4 +1,4 @@
-package main.java.com.farmaciascomunales.usuarios.model;
+package com.farmaciascomunales.usuarios.model;
 
 import jakarta.persistence.*;
 

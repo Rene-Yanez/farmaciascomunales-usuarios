@@ -1,4 +1,4 @@
-package main.java.com.farmaciascomunales.usuarios.controller;
+package com.farmaciascomunales.usuarios.controller;
 
 import com.farmaciascomunales.usuarios.model.Usuario;
 import com.farmaciascomunales.usuarios.service.UsuarioService;
