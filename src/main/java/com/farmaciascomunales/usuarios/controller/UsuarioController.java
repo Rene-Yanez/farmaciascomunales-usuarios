@@ -3,6 +3,8 @@ package com.farmaciascomunales.usuarios.controller;
 import com.farmaciascomunales.usuarios.model.Usuario;
 import com.farmaciascomunales.usuarios.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
+import com.farmaciascomunales.usuarios.dto.LoginRequest;
+
 
 import java.util.List;
 
@@ -15,6 +17,17 @@ public class UsuarioController {
 
     public UsuarioController(UsuarioService service) {
         this.service = service;
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
+        Usuario usuario = usuarioService.buscarPorCorreo(loginRequest.getCorreo());
+
+        if (usuario == null || !usuario.getContrasena().equals(loginRequest.getContrasena())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales inválidas");
+        }
+
+        return ResponseEntity.ok(usuario);
     }
 
     @GetMapping

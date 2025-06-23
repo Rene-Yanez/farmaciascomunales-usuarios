@@ -12,6 +12,9 @@ public class Usuario {
     private String nombre;
     private String email;
     private String rol;
+    
+    @Column(nullable = false)
+    private String contrasena;
 
     // Getters y setters
     public Long getId() { return id; }
@@ -29,4 +32,5 @@ public class Usuario {
     public String getRol() { return rol; }
 
     public void setRol(String rol) { this.rol = rol; }
-}
+
+    }

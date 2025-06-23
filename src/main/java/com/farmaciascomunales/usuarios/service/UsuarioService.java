@@ -11,6 +11,13 @@ public class UsuarioService {
 
     private final UsuarioRepository repository;
 
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    public Usuario buscarPorCorreo(String correo) {
+        return usuarioRepository.findByCorreo(correo);
+    }
+
     public UsuarioService(UsuarioRepository repository) {
         this.repository = repository;
     }
