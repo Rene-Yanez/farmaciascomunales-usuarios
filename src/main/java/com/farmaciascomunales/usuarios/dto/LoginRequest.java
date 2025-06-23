@@ -1,16 +1,16 @@
 package com.farmaciascomunales.usuarios.dto;
 
 public class LoginRequest {
-    private String email;
+    private String correo;
     private String contrasena;
 
     // Getters y Setters
     public String getCorreo() {
-        return email;
+        return correo;
     }
 
-    public void setCorreo(String email) {
-        this.email = email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getContrasena() {
