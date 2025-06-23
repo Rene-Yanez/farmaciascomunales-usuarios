@@ -13,7 +13,7 @@ public class Usuario {
     private String correo;
     private String rol;
     
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String contrasena;
 
     // Getters y setters
