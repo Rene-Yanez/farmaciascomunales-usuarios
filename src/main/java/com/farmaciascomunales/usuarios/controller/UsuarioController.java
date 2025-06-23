@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*") // Permite peticiones desde cualquier frontend
+@CrossOrigin(origins = "https://farmaciascomunales-frontend.onrender.com")
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
