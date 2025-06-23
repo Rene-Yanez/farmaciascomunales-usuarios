@@ -1,6 +1,5 @@
 package com.farmaciascomunales.usuarios.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,7 @@ public class UsuarioController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-        Usuario usuario = usuarioService.buscarPorCorreo(loginRequest.getCorreo());
+        Usuario usuario = service.buscarPorCorreo(loginRequest.getCorreo());
 
         if (usuario == null || !usuario.getContrasena().equals(loginRequest.getContrasena())) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales inválidas");
