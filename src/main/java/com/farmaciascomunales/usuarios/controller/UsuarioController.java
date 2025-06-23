@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // Permite peticiones desde cualquier frontend
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
