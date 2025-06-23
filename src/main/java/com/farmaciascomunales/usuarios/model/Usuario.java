@@ -10,7 +10,10 @@ public class Usuario {
     private Long id;
 
     private String nombre;
-    private String correo;
+    @Column(nullable = true)
+private String correo;
+
+
     private String rol;
     
     @Column(nullable = true)
@@ -27,7 +30,7 @@ public class Usuario {
 
     public String getCorreo() { return Correo; }
 
-    public void setCorreo(String Correo) { this.Correo = Correo; }
+    public void setCorreo(String correo) { this.correo = correo; }
 
     public String getRol() { return rol; }
 
